@@ -7,6 +7,7 @@ function running() {
 }
 
 function setup() {
+    r.SetTraceLogLevel(r.LOG_NONE);
     r.InitWindow(v.WINDOW_WIDTH, v.WINDOW_HEIGHT, v.WINDOW_TITLE);
     r.SetTargetFPS(v.WINDOW_FPS);
 
