@@ -1,6 +1,7 @@
 const r = require("raylib");
 const v = require("./variable");
 const game = require("./game");
+let howToPlayScreen = true;
 
 function running() {
     return !r.WindowShouldClose();
@@ -15,6 +16,13 @@ function setup() {
 }
 
 function update() {
+    if (howToPlayScreen) {
+        if (r.IsMouseButtonPressed(r.MOUSE_BUTTON_LEFT)) {
+            howToPlayScreen = false;
+        }
+        return;
+    }
+
     if (r.IsMouseButtonPressed(r.MOUSE_BUTTON_LEFT)) {
         const mouse = r.GetMousePosition();
 
@@ -31,12 +39,19 @@ function update() {
                 break;
             }
         }
+
     }
 }
 
 function draw() {
     r.BeginDrawing();
     r.ClearBackground(r.LIGHTGRAY);
+
+    if (howToPlayScreen) {
+        game.howToPlay();
+        r.EndDrawing();
+        return;
+    }
 
     const TITLE = "KAMI GAME";
     const TITLE_FONT_SIZE = 25;
