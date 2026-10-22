@@ -53,7 +53,7 @@ function draw() {
         return;
     }
 
-    const TITLE = "KAMI GAME";
+    const TITLE = "FLOOD FILL";
     const TITLE_FONT_SIZE = 25;
     const TITLE_X = (v.WINDOW_WIDTH - r.MeasureText(TITLE, TITLE_FONT_SIZE)) / 2;
 

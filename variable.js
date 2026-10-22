@@ -3,7 +3,7 @@ const r = require("raylib")
 const WINDOW_WIDTH = 800;
 const WINDOW_HEIGHT = 700;
 const WINDOW_FPS = 60;
-const WINDOW_TITLE = "KAMI | Color Puzzle"
+const WINDOW_TITLE = "FLOOD FILL | Color Puzzle"
 
 const ROWS = 10;
 const COLS = 10;
@@ -61,7 +61,7 @@ const COLOR_BUTTONS = [
     }
 ];
 
-const COLORS = [r.RED, r.YELLOW, r.BLUE];
+const COLORS = [r.GOLD, r.SKYBLUE, r.ColorAlpha(r.RED, 0.7)];
 
 let board = [];
 let active = [];
